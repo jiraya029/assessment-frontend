@@ -3,7 +3,7 @@ import axios from "axios";
 // During local development, Vite proxies /api to the Node backend. This lets
 // phones and other computers use the site without treating their own localhost
 // as the API server. A deployed VITE_API_URL still takes precedence.
-const baseURL = import.meta.env.VITE_API_URL || "https://assessment-backend-production-a284.up.railway.app";
+const baseURL = import.meta.env.VITE_API_URL || "https://assessment-backend-production-a284.up.railway.app/api";
 
 export const api = axios.create({ baseURL });
 
