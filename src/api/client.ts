@@ -1,8 +1,9 @@
 import axios from "axios";
 
-// Points at your local backend by default. When you deploy, set VITE_API_URL
-// in a .env file (e.g. VITE_API_URL=https://your-ec2-domain/api) and rebuild.
-const baseURL = import.meta.env.VITE_API_URL || "http://localhost:4000/api";
+// During local development, Vite proxies /api to the Node backend. This lets
+// phones and other computers use the site without treating their own localhost
+// as the API server. A deployed VITE_API_URL still takes precedence.
+const baseURL = import.meta.env.VITE_API_URL || "https://assessment-backend-production-a284.up.railway.app";
 
 export const api = axios.create({ baseURL });
 
