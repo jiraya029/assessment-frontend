@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-ink: #0B1220;
+  --color-panel: #121A2B;
+  --color-panel-line: #223049;
+  --color-text: #E7ECF5;
+  --color-muted: #8792A6;
+  --color-accent: #3ED598;
+  --color-accent-amber: #F2B84B;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-ink);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+@keyframes chase-dot {
+  0% { opacity: 0.35; }
+  2% { opacity: 1; }
+  8% { opacity: 0.35; }
+  100% { opacity: 0.35; }
+}
+
+.chase-dot {
+  animation: chase-dot 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chase-dot {
+    animation: none;
+    opacity: 0.6;
+  }
+}
