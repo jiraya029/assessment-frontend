@@ -123,7 +123,7 @@ export function QuizzesPanel() {
           disabled={generating}
           className="mt-4 rounded-md bg-accent px-4 py-2.5 font-body text-sm font-semibold text-ink transition-opacity hover:opacity-90 disabled:opacity-50"
         >
-          {generating ? "Generating with AI…" : "Generate quiz"}
+          {generating ? "Generating…" : "Generate quiz"}
         </button>
       </div>
 
